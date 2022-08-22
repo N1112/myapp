@@ -87,6 +87,11 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'Career',
           to: '/career'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Article',
+          to: '/article'
         }
       ],
       miniVariant: false,

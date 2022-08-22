@@ -10,7 +10,7 @@
         人物
         <footer>
           <small>
-            <em>&mdash;John Johnson</em>
+            <em><a href="https://mynavi-creator.jp/knowhow/article/cool-web-design-portfolio-sites" target="_blank">&mdash;John Johnson</a></em>
           </small>
         </footer>
       </blockquote>
