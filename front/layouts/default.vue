@@ -1,16 +1,18 @@
-<template class="gb">
+<template>
   <v-app dark>
     <v-app-bar
       :clipped-left="clipped"
       fixed
       app
     >
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title v-text="items.title" />
       <v-spacer/>
-      <v-toolbar-title v-text="title" />
-      <v-toolbar-title v-text="title" />
+      <v-btn text class="header-menu" to="/">{{items.top}}</v-btn>
+      <v-btn text class="header-menu" to="/works">{{items.work}}</v-btn>
+      <v-btn text class="header-menu" to="/blog">{{items.blog}}</v-btn>
+      <v-btn text class="header-menu" to="/about">{{items.about}}</v-btn>
     </v-app-bar>
-    <v-main>
+    <v-main class="gb">
       <v-container>
         <Nuxt />
       </v-container>
@@ -32,12 +34,12 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-footer
+    <!-- <v-footer
       :absolute="!fixed"
       app
     >
       <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+    </v-footer> -->
   </v-app>
 </template>
 
@@ -49,33 +51,16 @@ export default {
       clipped: false,
       drawer: false,
       fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Top',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Charactor',
-          to: '/charactor'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Career',
-          to: '/career'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Article',
-          to: '/article'
-        }
-      ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'N.T',
-      title2: "aaa"
+      items: {
+        title: 'NANAMI.TAKAHASHI',
+        top: 'Top',
+        work: 'Works',
+        blog: 'Blog',
+        about: 'About'
+      },
     }
   }
 }
@@ -83,6 +68,13 @@ export default {
 
 <style scoped>
   .gb {
-    background-image: url("~@/assets/image/bg-dark.jpg");
+    background-image: url("@/assets/image/black.jpg");
+    background-size: cover;
+  }
+  .header-menu {
+    margin-right: 4em;
+  }
+  .header-menu:before {
+    background-color: transparent;
   }
 </style>
