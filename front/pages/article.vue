@@ -1,6 +1,6 @@
 <template>
-  <v-row>
-    <v-col class="text-center">
+<div class="user">
+  <v-col class="text-center">
       <img
         src="/v.png"
         alt="Vuetify.js"
@@ -19,7 +19,63 @@
         </footer>
       </blockquote>
     </v-col>
-  </v-row>
+
+  <div class="v-card">
+    <v-card
+      class="mx-auto"
+      max-width="344"
+    >
+      <v-card-text>
+        <div>Word of the Day</div>
+        <p class="text-h4 text--primary">
+          be•nev•o•lent
+        </p>
+        <p>adjective</p>
+        <div class="text--primary">
+          well meaning and kindly.<br>
+          "a benevolent smile"
+        </div>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn
+          text
+          color="deep-purple accent-4"
+        >
+          Learn More
+        </v-btn>
+      </v-card-actions>
+    </v-card>
+
+
+
+
+    <v-card
+      class="mx-auto"
+      max-width="344"
+    >
+      <v-card-text>
+        <div>Word of the Day</div>
+        <p class="text-h4 text--primary">
+          be•nev•o•lent
+        </p>
+        <p>adjective</p>
+        <div class="text--primary">
+          well meaning and kindly.<br>
+          "a benevolent smile"
+        </div>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn
+          text
+          color="deep-purple accent-4"
+        >
+          Learn More
+        </v-btn>
+      </v-card-actions>
+    </v-card>
+  </div>
+
+</div>
 </template>
 
 <script>
@@ -27,3 +83,18 @@ export default {
   name: 'InspirePage'
 }
 </script>
+
+<style scoped>
+  .v-card {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .form-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .date-picker {
+    padding: 0.6em 0 2em 0;
+  }
+</style>
+
