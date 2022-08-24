@@ -4,13 +4,13 @@
       <v-card>
         <v-card-title class="purple lighten-2">
           <v-icon size="42" class="mr-4"> mdi-school-outline  </v-icon>
-          <h2 class="text-h4 white--text font-weight-light">
+          <h2 class="text-h4 white--text timeline-title">
             {{ item1.title }}
           </h2>
         </v-card-title>
         <v-container>
-          <v-col cols="12" md="10">
-            <p>{{ item1.text }}</p>
+          <v-col cols="12" md="30">
+            <p class="timeline-text">{{ item1.text }}</p>
           </v-col>
           <agreement-dialog-component
             :agreementDialog="agreementDialog"
@@ -27,14 +27,14 @@
     <v-timeline-item color="amber lighten-1" fill-dot left>
       <v-card>
         <v-card-title class="amber lighten-1 justify-end">
-          <h2 class="text-h4 mr-4 white--text font-weight-light text-right">
+          <h2 class="text-h4 mr-4 white--text text-right timeline-title">
             {{ item2.title }}
           </h2>
           <v-icon size="42"> mdi-folder-network-outline </v-icon>
         </v-card-title>
         <v-container>
-          <v-col cols="12" md="10">
-            <p>{{ item2.text }}</p>
+          <v-col cols="12" md="30">
+            <p class="timeline-text">{{ item2.text }}</p>
           </v-col>
           <agreement-dialog-component2
             :agreementDialog="agreementDialog2"
@@ -51,14 +51,14 @@
     <v-timeline-item color="cyan lighten-1" fill-dot right>
       <v-card>
         <v-card-title class="cyan lighten-1">
-          <v-icon class="mr-4" size="42"> mdi-api  </v-icon>
-          <h2 class="text-h4 white--text font-weight-light">
+          <v-icon class="mr-4" size="42"> mdi-folder-network-outline </v-icon>
+          <h2 class="text-h4 white--text timeline-title">
             {{ item3.title }}
           </h2>
         </v-card-title>
         <v-container>
-          <v-col cols="12" md="10">
-            <p>{{ item3.text }}</p>
+          <v-col cols="12" md="30">
+            <p class="timeline-text">{{ item3.text }}</p>
           </v-col>
           <agreement-dialog-component3
             :agreementDialog="agreementDialog3"
@@ -91,16 +91,16 @@ export default {
       agreementDialog2: false,
       agreementDialog3: false,
       item1: {
-        title: "\"2016~2020\": 城西国際大学",
-        text: "てきすとてきすとてきすとてきすとてきすと",
+        title: "\"2016~2020\" : 某メディア系大学",
+        text: "音楽、映像、ビジネスを専攻。作曲や編曲を通してものづくりのノウハウ、楽しさを学ぶ。",
       },
       item2: {
-        title: "\"2020~2021\": 株式会社フォー・クオリア",
-        text: "てきすとてきすとてきすとてきすとてきすと2",
+        title: "\"2020~2021\" : 株式会社F",
+        text: "未経験エンジニアとして新卒入社。PHPを中心にコーディングスキル、ロジカルシンキング能力を養う。",
       },
       item3: {
-        title: "\"2021~\": 株式会社ブリスコラ(常駐)",
-        text: "てきすとてきすとてきすとてきすとてきすと3",
+        title: "\"2021~\" : 株式会社B(常駐)",
+        text: "SES事業として他会社へ常駐。API関連のサービスを展開する企業でのWebアプリの開発に携わり、Javascript,Vue.js,Nuxt.jsを習得しSwaggerやStoplightを通じてOpen API Specの知見を広げる。",
       },
       message: "",
     };
@@ -122,5 +122,13 @@ export default {
 <style scoped>
   .text-right {
     text-align: left !important
+  }
+  .timeline-title {
+    font-size: 1.4em !important;
+    font-family: Arial !important;
+  }
+  .timeline-text {
+    font-size: 1.1em !important;
+    font-family: Arial !important;
   }
 </style>

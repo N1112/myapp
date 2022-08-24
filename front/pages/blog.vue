@@ -2,12 +2,11 @@
   <div>
     <v-col class="text-center">
       <img src="@/assets/image/blog.png" class="mb-5" />
-      <!-- <p>自身が作成した記事の一部</p> -->
     </v-col>
     <div class="v-card-comp" v-for="item in items" :key="item">
       <v-card class="mx-auto" max-width="500" :href="item.link" target="_blank">
         <v-img class="white--text align-end" height="11em" :src="item.src"></v-img>
-        <v-card-text>
+        <v-card-text class="font-option">
           <div></div>
           <p class="text-h4 text--primary">
             {{ item.title }}
@@ -69,19 +68,23 @@ export default {
 </script>
 
 <style scoped>
-.v-card-comp {
-  display: flex;
-  justify-content: flex-end;
-  margin: 1em 1em 1em 2em;
-  float: left;
-  align-items: center;
-}
-.form-btn {
-  display: flex;
-  justify-content: flex-end;
-}
-.date-picker {
-  padding: 0.6em 0 2em 0;
-}
+  .v-card-comp {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1em 1em 1em 2em;
+    float: left;
+    align-items: center;
+  }
+  .form-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .date-picker {
+    padding: 0.6em 0 2em 0;
+  }
+  .font-option {
+    font-size: 1.4em !important;
+    font-family: メイリオ !important;
+  }
 </style>
 
