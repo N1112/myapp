@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col class="text-center">
-      <img src="/v.png" alt="Vuetify.js" class="mb-5" />
+      <img src="@/assets/image/profile.jpeg" class="mb-5 profile-img" />
       <blockquote class="blockquote">
         <div class="profile-name">Nanami Takahashi</div>
 
@@ -63,23 +63,26 @@ export default {
 </script>
 
 <style scoped>
+  .profile-img {
+    width: 30em;
+    height: 20em;
+  }
   .space {
-    padding-top: 6em;
+    padding-top: 5.5em;
   }
   .profile-name {
-    font-size: 4.5em;
+    font-size: 4em;
     font-family: Impact;
-    padding-top: 1em;
   }
   .profile-space {
-    padding-top: 1.5em;
+    padding-top: 1em;
   }
   .profile-title {
-    font-size: 3em;
+    font-size: 2.5em;
     font-family: Impact;
   }
   .profile-body {
-    font-size: 1.3em;
+    font-size: 1em;
     font-family: Tahoma;
   }
   .font-red {

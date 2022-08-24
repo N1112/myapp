@@ -5,7 +5,7 @@
       fixed
       app
     >
-      <v-toolbar-title v-text="items.title" />
+      <v-toolbar-title v-text="items.title" class="header-title"/>
       <v-spacer/>
       <v-btn text class="header-menu" to="/">{{items.top}}</v-btn>
       <v-btn text class="header-menu" to="/works">{{items.work}}</v-btn>
@@ -71,8 +71,13 @@ export default {
     background-image: url("@/assets/image/black.jpg");
     background-size: cover;
   }
+  .header-title {
+    font-size: 2em;
+    font-family: Impact;
+  }
   .header-menu {
     margin-right: 4em;
+    font-family: Impact;
   }
   .header-menu:before {
     background-color: transparent;
