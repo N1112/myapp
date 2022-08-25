@@ -4,6 +4,9 @@
 
 <img src='front/assets/image/site-page.jpg'>
 
+## URL 
+https://nt-myapp.firebaseapp.com
+
 ## 使用言語
 
 - Nuxt.js 2.15.8
