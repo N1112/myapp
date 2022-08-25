@@ -68,7 +68,7 @@ export default {
     height: 20em;
   }
   .space {
-    padding-top: 5.5em;
+    padding-top: 4em;
   }
   .profile-name {
     font-size: 4em;

@@ -67,6 +67,14 @@ export default {
 </script>
 
 <style scoped>
+  .page-enter-active,
+  .page-leave-active {
+    transition: opacity 1s;
+  }
+  .page-enter,
+  .page-leave-active {
+    opacity: 0;
+  }
   .gb {
     background-image: url("@/assets/image/black.jpg");
     background-size: cover;

@@ -4,16 +4,17 @@
       <img src="@/assets/image/blog.png" class="mb-5" />
     </v-col>
     <div class="v-card-comp" v-for="item in items" :key="item">
-      <v-card class="mx-auto" max-width="500" :href="item.link" target="_blank">
-        <v-img class="white--text align-end" height="11em" :src="item.src"></v-img>
-        <v-card-text class="font-option">
-          <div></div>
-          <p class="text-h4 text--primary">
-            {{ item.title }}
-          </p>
-          
-        </v-card-text>
-      </v-card>
+      <v-hover v-slot="{ hover }">
+        <v-card class="mx-auto" max-width="500" :href="item.link" target="_blank" :elevation="hover ? 10 : 2" :class="{ 'on-hover': hover }">
+          <v-img class="white--text align-end" height="11em" :src="item.src"></v-img>
+          <v-card-text class="font-option">
+            <div></div>
+            <p class="text-h4 text--primary">
+              {{ item.title }}
+            </p>
+          </v-card-text>
+        </v-card>
+      </v-hover>
     </div>
   </div>
 
