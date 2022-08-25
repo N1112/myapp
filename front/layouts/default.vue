@@ -35,12 +35,6 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <!-- <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer> -->
   </v-app>
 </template>
 
@@ -67,12 +61,12 @@ export default {
   mounted() {
     let setProperty;
     const circle = document.querySelector('.circle');
-
     document.addEventListener('mousemove', function(e){
       setProperty = `translate(${e.clientX}px, ${e.clientY}px`;
       circle.style.transform = setProperty;
     })
-}}
+  }
+}
 </script>
 
 <style scoped>
@@ -99,17 +93,17 @@ export default {
   .header-menu:before {
     background-color: transparent;
   }
-.circle {
-  position: absolute;
-  border: 3px solid rgba(251, 255, 136, 0.947);
-  color: rgba(251, 255, 136, 0.947);
-  border-radius: 50%;
-  pointer-events: none;
-  width: 25px;
-  height: 25px;
-  top: -12.5px;
-  left: -12.5px;
-  transition: transform .25s ease-out;
-  z-index: 999;
-}
+  .circle {
+    color: rgba(251, 255, 136, 0.947);
+    border-radius: 50%;
+    pointer-events: none;
+    width: 25px;
+    height: 25px;
+    top: -12.5px;
+    left: -12.5px;
+    transition: transform .25s ease-out;
+    z-index: 999;
+    position:fixed;
+    background-color:rgba(251, 255, 136, 0.791);
+  }
 </style>
